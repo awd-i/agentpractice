@@ -1,0 +1,10 @@
+workspace/
+__pycache__/
+*.pyc
+.pytest_cache/
+ts/node_modules/
+ts/dist/
+.dojo-state.json
+ts/.vitest-report.json
+ts/workspace/
+verify-*/
