@@ -1,0 +1,23 @@
+[project]
+name = "debug-dojo"
+version = "0.1.0"
+description = "Practice repo for debugging-round interviews: a support agent state machine with planted bugs"
+requires-python = ">=3.11"
+dependencies = ["pytest>=8"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+extend-exclude = ["workspace", "ts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "UP042"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["supportdesk", "helpers"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+addopts = "-q -p no:cacheprovider"
